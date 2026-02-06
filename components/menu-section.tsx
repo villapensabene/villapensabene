@@ -246,9 +246,9 @@ export function MenuSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="columns-1 md:columns-2 gap-8 space-y-8 mb-12">
           {menuCategories.map((category, index) => (
-            <Card key={index} className="p-8 bg-card">
+            <Card key={index} className="p-8 bg-card break-inside-avoid-column mb-8">
               <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
                 {category.title}
               </h3>
