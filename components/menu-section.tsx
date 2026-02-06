@@ -246,9 +246,62 @@ export function MenuSection() {
           </p>
         </div>
 
-        <div className="columns-1 md:columns-2 gap-8 space-y-8 mb-12">
+        {/* Desktop View: Distributed into 2 columns to maintain horizontal order feel with independent heights */}
+        <div className="hidden md:flex md:flex-row gap-8 mb-12">
+          <div className="flex-1 space-y-8">
+            {menuCategories
+              .filter((_, i) => i % 2 === 0)
+              .map((category, index) => (
+                <Card key={index} className="p-8 bg-card">
+                  <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
+                    {category.title}
+                  </h3>
+                  <div className="space-y-6">
+                    {category.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="border-b border-border pb-4 last:border-0 last:pb-0">
+                        <div className="flex justify-between items-start mb-2">
+                          <h4 className="font-semibold text-lg text-foreground">{item.name}</h4>
+                          <span className="text-accent font-bold text-lg whitespace-nowrap ml-4">{item.price}</span>
+                        </div>
+                        {item.description && (
+                          <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+              ))}
+          </div>
+          <div className="flex-1 space-y-8">
+            {menuCategories
+              .filter((_, i) => i % 2 !== 0)
+              .map((category, index) => (
+                <Card key={index} className="p-8 bg-card">
+                  <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
+                    {category.title}
+                  </h3>
+                  <div className="space-y-6">
+                    {category.items.map((item, itemIndex) => (
+                      <div key={itemIndex} className="border-b border-border pb-4 last:border-0 last:pb-0">
+                        <div className="flex justify-between items-start mb-2">
+                          <h4 className="font-semibold text-lg text-foreground">{item.name}</h4>
+                          <span className="text-accent font-bold text-lg whitespace-nowrap ml-4">{item.price}</span>
+                        </div>
+                        {item.description && (
+                          <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+              ))}
+          </div>
+        </div>
+
+        {/* Mobile View: Single column maintaining strict sequential order */}
+        <div className="flex flex-col gap-8 mb-12 md:hidden">
           {menuCategories.map((category, index) => (
-            <Card key={index} className="p-8 bg-card break-inside-avoid-column mb-8">
+            <Card key={index} className="p-8 bg-card">
               <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
                 {category.title}
               </h3>
