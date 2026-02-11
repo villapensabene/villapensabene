@@ -22,7 +22,12 @@ export function Navigation() {
             <a href="#home" className="text-foreground hover:text-accent transition-colors">
               Home
             </a>
-            <a href="#menu" className="text-foreground hover:text-accent transition-colors">
+            <a
+              href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-accent transition-colors"
+            >
               Menu
             </a>
             <a href="#about" className="text-foreground hover:text-accent transition-colors">
@@ -54,7 +59,9 @@ export function Navigation() {
               Home
             </a>
             <a
-              href="#menu"
+              href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria"
+              target="_blank"
+              rel="noopener noreferrer"
               className="block py-2 text-foreground hover:text-accent transition-colors"
               onClick={() => setIsOpen(false)}
             >

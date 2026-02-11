@@ -28,7 +28,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#menu" className="hover:text-accent transition-colors">
+                <a
+                  href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
                   Menu
                 </a>
               </li>
@@ -54,14 +59,18 @@ export function Footer() {
             <h4 className="font-serif text-xl font-bold mb-4">Seguici</h4>
             <div className="flex gap-4 mb-4">
               <a
-                href="#"
+                href="https://www.facebook.com/villapensabeneristorante/?locale=it_IT"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-2 rounded-full hover:bg-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/villapensabene/?hl=it"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-primary-foreground/10 p-2 rounded-full hover:bg-accent transition-colors"
                 aria-label="Instagram"
               >
@@ -71,8 +80,8 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <a href="tel:+390912345678" className="hover:text-accent transition-colors">
-                  +39 091 234 5678
+                <a href="tel:+393274146546" className="hover:text-accent transition-colors">
+                  327 414 6546
                 </a>
               </div>
               <div className="flex items-center gap-2">

@@ -19,8 +19,14 @@ export function HeroSection() {
           {"Dove la tradizione italiana incontra l'autentico sapore della cucina casalinga"}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
-            Scopri il Menu
+          <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8" asChild>
+            <a
+              href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Scopri il Menu
+            </a>
           </Button>
           <Button
             size="lg"

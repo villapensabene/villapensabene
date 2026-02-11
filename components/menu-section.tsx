@@ -8,9 +8,9 @@ const menuCategories = [
       { name: "Patatine fresche fritte", price: "€4.00", description: "" },
       { name: "Bruschetta classica", price: "€5.00", description: "Pomodoro, Olio, Sale, Pepe, Origano" },
       {
-        name: "Antipasto caldo",
+        name: "Antipasto Caldo",
         price: "€6.00",
-        description: "Patatine Fritte, Arancinette con Carne e Burro, Crostino, Panelline, Crocchè",
+        description: "Patatine Fritte, Arancinette con Carne e Burro, Crostino, Panelline*, Crocchè*",
       },
       {
         name: "Antipasto delle fritte",

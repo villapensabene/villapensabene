@@ -21,12 +21,12 @@ export function ContactSection() {
               <div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">Indirizzo</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Via Esempio 123
+                  Via P.40, 29
                   <br />
-                  90100 Palermo, Italia
+                  90146 Palermo PA, Italia
                 </p>
                 <a
-                  href="https://maps.app.goo.gl/Ge4LRCFnxHFE6nwf7"
+                  href="https://maps.app.goo.gl/ErK4fypQzfVWmpL1A"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-accent hover:underline inline-block mt-2"
@@ -41,8 +41,8 @@ export function ContactSection() {
               <div>
                 <h3 className="font-bold text-lg mb-2 text-foreground">Telefono</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  <a href="tel:+390912345678" className="hover:text-accent transition-colors">
-                    +39 091 234 5678
+                  <a href="tel:+393274146546" className="hover:text-accent transition-colors">
+                    327 414 6546
                   </a>
                 </p>
               </div>
@@ -66,13 +66,13 @@ export function ContactSection() {
                 <h3 className="font-bold text-lg mb-2 text-foreground">Orari di Apertura</h3>
                 <div className="text-muted-foreground space-y-1 leading-relaxed">
                   <p>
-                    <span className="font-semibold text-foreground">Lun - Ven:</span> 12:00 - 15:00, 19:00 - 23:00
+                    <span className="font-semibold text-foreground">Lun:</span> Chiuso
                   </p>
                   <p>
-                    <span className="font-semibold text-foreground">Sabato:</span> 12:00 - 15:00, 19:00 - 00:00
+                    <span className="font-semibold text-foreground">Mar - Sab:</span> 16:00 - 00:00
                   </p>
                   <p>
-                    <span className="font-semibold text-foreground">Domenica:</span> 12:00 - 15:00, 19:00 - 23:00
+                    <span className="font-semibold text-foreground">Domenica:</span> 12:30 - 00:00
                   </p>
                 </div>
               </div>
