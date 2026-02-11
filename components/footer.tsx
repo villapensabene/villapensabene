@@ -96,6 +96,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm opacity-75">
           <p>© 2026 Villa Pensabene Ristorante Pizzeria. Tutti i diritti riservati.</p>
+          <p className="mt-2 text-xs opacity-70">P.IVA IT06636480821</p>
         </div>
       </div>
     </footer>
