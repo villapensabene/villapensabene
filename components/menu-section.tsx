@@ -83,7 +83,7 @@ const menuCategories = [
         price: "€12.00",
         description: "Iceberg, Straccetti di Pollo Grill, Scaglie di Grana, Verdure, Olio EVO",
       },
-      { name: "Chianina di Angus (200 gr circa)", price: "€5.00/etto", description: "" },
+      { name: "Chianina di Angus (800 gr circa)", price: "€5.00/etto", description: "" },
       { name: "Tagliata di pollo con julienne di verdure stufate", price: "€16.00", description: "" },
       { name: "Tagliata di manzo con rucola, grana e pomodorini", price: "€17.00", description: "" },
       { name: "Stinco di maiale con contorno di patate al burro", price: "€17.00", description: "" },
