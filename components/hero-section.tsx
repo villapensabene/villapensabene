@@ -20,12 +20,13 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance">
-          Benvenuti a Villa Pensabene
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-pretty leading-relaxed">
-          {"Dove la tradizione italiana incontra l'autentico sapore della cucina casalinga"}
-        </p>
+        <div className="mb-8 flex justify-center">
+          <img
+            src="/icon.svg"
+            alt="Villa Pensabene Logo"
+            className="w-32 h-32 md:w-40 md:h-40"
+          />
+        </div>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8" asChild>
             <a
