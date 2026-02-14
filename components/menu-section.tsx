@@ -209,6 +209,21 @@ const menuCategories = [
     ],
   },
   {
+    title: "Giro Pizza",
+    items: [
+      {
+        name: "Giro Pizza € 15,00",
+        price: "€15.00",
+        description: "✅ Antipasto Caldo | ✅ Sfincionello Palermitano | ✅ Giro Pizze tra le nostre diverse varietà | ✅ Coca Cola da 1 litro (1 ogni 4 partecipanti) | ✅ Birra da 66cl (1 ogni 3 partecipanti) | ✅ Acqua (libera)",
+      },
+      {
+        name: "Giro Pizza € 18,00",
+        price: "€18.00",
+        description: "✅ Antipasto Caldo | ✅ Bruschette Classiche | ✅ Sfincionello Palermitano | ✅ Focaccine Miste (Ricotta, Porchetta, Panelline) | ✅ Giro Pizze tra le nostre varietà | ✅ Coca Cola da 1 litro (1 ogni 4 partecipanti) | ✅ Birra da 66cl (1 ogni 3 partecipanti) | ✅ Acqua (libera)",
+      },
+    ],
+  },
+  {
     title: "Dessert & Bevande",
     items: [
       { name: "Le torte di Villa Pensabene", price: "€5.00", description: "" },
