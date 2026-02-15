@@ -88,9 +88,29 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm opacity-75">
-          <p>© 2026 Villa Pensabene Ristorante Pizzeria. Tutti i diritti riservati.</p>
-          <p className="mt-2 text-xs opacity-70">P.IVA IT06636480821</p>
+        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm opacity-75">
+          <div className="text-center md:text-left">
+            <p>© 2026 Villa Pensabene Ristorante Pizzeria. Tutti i diritti riservati.</p>
+            <p className="mt-1 text-xs opacity-70">P.IVA IT06636480821</p>
+          </div>
+
+          <div className="flex items-center gap-3 bg-primary-foreground/5 px-4 py-2 rounded-full border border-primary-foreground/10 transition-all hover:bg-primary-foreground/10 group">
+            <span className="text-[10px] uppercase font-bold tracking-widest opacity-60">Sviluppato da</span>
+            <a
+              href="https://gofoodmenu.it/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <Image
+                src="/credits/icon.svg"
+                alt="GO!Food Italia"
+                width={80}
+                height={24}
+                className="h-5 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
