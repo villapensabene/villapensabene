@@ -16,7 +16,7 @@ export function AboutSection() {
         </div>
 
         {/* Promotional Video */}
-        <div className="max-w-4xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+        <div className="max-w-2xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
           <video
             autoPlay
             muted
