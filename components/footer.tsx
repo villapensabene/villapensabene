@@ -62,7 +62,7 @@ export function Footer() {
                   Via P.40, 29<br />
                   90146 Palermo PA, Italia
                   <br />
-                  <a href="https://maps.app.goo.gl/ErK4fypQzfVWmpL1A" target="_blank" className="text-accent hover:underline text-xs mt-1 block">Indicazioni Stradali →</a>
+                  <a href="https://maps.app.goo.gl/ErK4fypQzfVWmpL1A" target="_blank" className="text-gold hover:underline text-xs mt-1 block">Indicazioni Stradali →</a>
                 </span>
               </li>
               <li className="flex items-center gap-3">
