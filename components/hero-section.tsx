@@ -41,8 +41,9 @@ export function HeroSection() {
             size="lg"
             variant="outline"
             className="border-2 border-white text-white hover:bg-white hover:text-foreground text-lg px-8 bg-transparent"
+            asChild
           >
-            Prenota un Tavolo
+            <a href="#contact">Prenota un Tavolo</a>
           </Button>
         </div>
       </div>
