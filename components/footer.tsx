@@ -16,8 +16,9 @@ export function Footer() {
               className="h-14 w-auto brightness-0 invert"
             />
             <p className="text-sm leading-relaxed opacity-80">
-              {"Autentica cucina siciliana, tradizione e passione dal 1985. Un luogo dove sentirsi a casa, nel cuore di Palermo."}
+              {"Villa Pensabene è la location perfetta per i tuoi eventi speciali, grazie a un'accogliente sala interna e un ampio spazio esterno. Gusta le nostre specialità cotte nel forno a legna mentre i più piccoli si divertono in sicurezza nella nostra area giochi bimbi. E la domenica, ti aspettiamo con l'esclusiva formula 'Agriturismo in città' per il pranzo della domenica."}
             </p>
+
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/villapensabeneristorante/?locale=it_IT"
