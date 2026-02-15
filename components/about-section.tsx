@@ -237,6 +237,20 @@ export function AboutSection() {
             </p>
           </div>
 
+          {/* Giro Pizza Promotional Video */}
+          <div className="max-w-md mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="w-full h-auto bg-black"
+            >
+              <source src="/giropizza.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             {/* Formula €15 */}
             <Card className="relative overflow-hidden border-none shadow-2xl bg-card transition-transform hover:scale-[1.01] duration-300">
