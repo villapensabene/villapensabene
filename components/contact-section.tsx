@@ -1,8 +1,47 @@
+"use client"
+
+import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { MapPin, Phone, Clock, Mail } from "lucide-react"
 
 export function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    time: "",
+    guests: "2 persone",
+    message: "",
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target
+    setFormData((prev) => ({ ...prev, [id]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const { name, date, time, guests, message, phone } = formData
+
+    const whatsappMessage = `Prenotazione Tavolo - Villa Pensabene
+-------------------------
+Nome: ${name}
+Data: ${date}
+Ora: ${time}
+Ospiti: ${guests}
+Telefono Cliente: ${phone}
+-------------------------
+Note: ${message || "Nessuna nota aggiuntiva"}`
+
+    const encodedMessage = encodeURIComponent(whatsappMessage)
+    const whatsappUrl = `https://wa.me/393274146546?text=${encodedMessage}`
+
+    window.open(whatsappUrl, "_blank")
+  }
+
   return (
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -82,7 +121,7 @@ export function ContactSection() {
           {/* Reservation Form */}
           <Card className="p-8 bg-card">
             <h3 className="font-serif text-2xl font-bold mb-6 text-foreground">Prenota un Tavolo</h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                   Nome e Cognome
@@ -90,6 +129,9 @@ export function ContactSection() {
                 <input
                   type="text"
                   id="name"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                   placeholder="Mario Rossi"
                 />
@@ -101,6 +143,9 @@ export function ContactSection() {
                 <input
                   type="email"
                   id="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                   placeholder="mario.rossi@example.com"
                 />
@@ -112,6 +157,9 @@ export function ContactSection() {
                 <input
                   type="tel"
                   id="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                   placeholder="+39 123 456 7890"
                 />
@@ -124,6 +172,9 @@ export function ContactSection() {
                   <input
                     type="date"
                     id="date"
+                    required
+                    value={formData.date}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                   />
                 </div>
@@ -134,6 +185,9 @@ export function ContactSection() {
                   <input
                     type="time"
                     id="time"
+                    required
+                    value={formData.time}
+                    onChange={handleChange}
                     className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                   />
                 </div>
@@ -144,13 +198,15 @@ export function ContactSection() {
                 </label>
                 <select
                   id="guests"
+                  value={formData.guests}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                 >
-                  <option>1 persona</option>
-                  <option>2 persone</option>
-                  <option>3 persone</option>
-                  <option>4 persone</option>
-                  <option>5+ persone</option>
+                  <option value="1 persona">1 persona</option>
+                  <option value="2 persone">2 persone</option>
+                  <option value="3 persone">3 persone</option>
+                  <option value="4 persone">4 persone</option>
+                  <option value="5+ persone">5+ persone</option>
                 </select>
               </div>
               <div>
@@ -160,12 +216,14 @@ export function ContactSection() {
                 <textarea
                   id="message"
                   rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                   placeholder="Richieste speciali, intolleranze, ecc."
                 />
               </div>
               <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
-                Invia Prenotazione
+                Invia Prenotazione su WhatsApp
               </Button>
             </form>
           </Card>
@@ -174,3 +232,4 @@ export function ContactSection() {
     </section>
   )
 }
+
