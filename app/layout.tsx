@@ -7,6 +7,10 @@ import "./globals.css"
 const _geist = Geist({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"] })
 
+export const viewport = {
+  themeColor: "#8B2635",
+}
+
 export const metadata: Metadata = {
   title: "Villa Pensabene - Ristorante Pizzeria",
   description:
@@ -29,7 +33,17 @@ export const metadata: Metadata = {
     ],
     apple: "/apple-icon.png",
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Villa Pensabene",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 }
+
 
 export default function RootLayout({
   children,
