@@ -23,7 +23,7 @@ export function AboutSection() {
             loop
             playsInline
             controls
-            className="w-full h-full object-cover aspect-video bg-black"
+            className="w-full h-auto bg-black"
           >
             <source src="/agriturismo-in-citta.mp4" type="video/mp4" />
           </video>
