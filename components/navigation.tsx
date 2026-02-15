@@ -1,90 +1,118 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { cn } from "@/lib/utils"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "Menu", href: "#menu" },
+    { name: "Chi Siamo", href: "#about" },
+    { name: "Galleria", href: "#gallery" },
+    { name: "Contatti", href: "#contact" },
+  ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+    <nav
+      className={cn(
+        "fixed left-0 right-0 z-50 transition-all duration-500 ease-in-out",
+        scrolled
+          ? "top-4 mx-4 md:mx-auto max-w-5xl rounded-full bg-background/70 backdrop-blur-lg border border-white/10 shadow-2xl"
+          : "top-0 bg-transparent border-transparent pt-4"
+      )}
+    >
+      <div className="container mx-auto px-6">
+        <div className={cn(
+          "flex items-center justify-between transition-all duration-500",
+          scrolled ? "h-16" : "h-20"
+        )}>
           {/* Logo */}
           <div className="flex items-center">
-            <Image src="/logo.png" alt="Villa Pensabene" width={180} height={60} className="h-12 w-auto" />
+            <Image
+              src="/logo.png"
+              alt="Villa Pensabene"
+              width={180}
+              height={60}
+              className={cn("h-10 w-auto transition-transform duration-500", scrolled && "scale-90")}
+            />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#home" className="text-foreground hover:text-accent transition-colors">
-              Home
-            </a>
-            <a href="#menu" className="text-foreground hover:text-accent transition-colors">
-              Menu
-            </a>
-            <a href="#about" className="text-foreground hover:text-accent transition-colors">
-              Chi Siamo
-            </a>
-            <a href="#gallery" className="text-foreground hover:text-accent transition-colors">
-              Galleria
-            </a>
-            <a href="#contact" className="text-foreground hover:text-accent transition-colors">
-              Contatti
-            </a>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90">Prenota Ora</Button>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "relative text-sm font-medium transition-colors hover:text-accent group",
+                  scrolled ? "text-foreground" : "text-white"
+                )}
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+              </a>
+            ))}
+            <Button
+              className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20"
+              asChild
+            >
+              <a href="#contact">Prenota Ora</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden p-2" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
+          <button
+            className={cn(
+              "md:hidden p-2 rounded-full transition-colors",
+              scrolled ? "text-foreground hover:bg-foreground/5" : "text-white hover:bg-white/10"
+            )}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-border">
-            <a
-              href="#home"
-              className="block py-2 text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsOpen(false)}
+          <div className="md:hidden py-6 space-y-4 border-t border-white/10 animate-in fade-in slide-in-from-top-4 duration-300">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  "block py-2 text-lg font-medium transition-colors hover:text-accent",
+                  scrolled ? "text-foreground" : "text-white"
+                )}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+            <Button
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-full py-6 text-lg"
+              asChild
             >
-              Home
-            </a>
-            <a
-              href="#menu"
-              className="block py-2 text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Menu
-            </a>
-            <a
-              href="#about"
-              className="block py-2 text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Chi Siamo
-            </a>
-            <a
-              href="#gallery"
-              className="block py-2 text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Galleria
-            </a>
-            <a
-              href="#contact"
-              className="block py-2 text-foreground hover:text-accent transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Contatti
-            </a>
-            <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90">Prenota Ora</Button>
+              <a href="#contact" onClick={() => setIsOpen(false)}>Prenota Ora</a>
+            </Button>
           </div>
         )}
       </div>
     </nav>
   )
 }
+
