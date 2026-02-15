@@ -79,7 +79,7 @@ export function Footer() {
                   href="https://maps.app.goo.gl/99hroLSAfosUnoku6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gold transition-all opacity-80 text-xs font-medium"
+                  className="text-gold hover:underline text-xs font-medium transition-all"
                 >
                   Controlla i nostri orari di apertura
                 </a>
