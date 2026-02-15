@@ -141,6 +141,20 @@ export function AboutSection() {
               </p>
             </div>
 
+            {/* Giro Pasta Promotional Video */}
+            <div className="max-w-md mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                className="w-full h-auto bg-black"
+              >
+                <source src="/giropasta.mp4" type="video/mp4" />
+              </video>
+            </div>
+
             <div className="grid lg:grid-cols-3 gap-12">
               {/* Appetizers */}
               <div className="lg:col-span-1">
