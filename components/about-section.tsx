@@ -139,6 +139,20 @@ export function AboutSection() {
             {"Creiamo insieme il tuo evento perfetto con menu personalizzati e un'atmosfera accogliente per festeggiare le tappe più importanti della tua vita."}
           </p>
 
+          {/* Events Promotional Video */}
+          <div className="max-w-2xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
+              className="w-full h-auto bg-black"
+            >
+              <source src="/eventi.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               { icon: <Baby className="text-accent" />, title: "Battesimi" },
