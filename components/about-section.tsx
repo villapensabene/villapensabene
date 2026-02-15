@@ -140,7 +140,7 @@ export function AboutSection() {
           </p>
 
           {/* Events Promotional Video */}
-          <div className="max-w-xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+          <div className="max-w-md mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
             <video
               autoPlay
               muted
