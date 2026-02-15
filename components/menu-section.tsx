@@ -1,7 +1,15 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+import { cn } from "@/lib/utils"
 
 const menuCategories = [
+  // ... (maintaining same menuCategories data)
   {
     title: "Gli Antipasti",
     items: [
@@ -32,7 +40,7 @@ const menuCategories = [
         price: "€15.00",
         description: "",
       },
-      { name: "Tartare di tonno con menta, capperi, soia, mandorle e arancia", price: "€15.00", description: "" },
+      { name: "Tartare di tonno with menta, capperi, soia, mandorle e arancia", price: "€15.00", description: "" },
       {
         name: "Insalata di mare imperiale",
         price: "€17.00",
@@ -87,7 +95,7 @@ const menuCategories = [
       { name: "Tagliata di pollo con julienne di verdure stufate", price: "€16.00", description: "" },
       { name: "Tagliata di manzo con rucola, grana e pomodorini", price: "€17.00", description: "" },
       { name: "Stinco di maiale con contorno di patate al burro", price: "€17.00", description: "" },
-      { name: "Filetto di vitello ai ferri con salsa al pepe rosa e patate arrosto", price: "€18.00", description: "" },
+      { name: "Filetto di vitello ai ferri with salsa al pepe rosa e patate arrosto", price: "€18.00", description: "" },
       {
         name: "Filetto di maialino in crosta di pistacchio, chutney di pere e zenzero e caponatina di verdure",
         price: "€18.00",
@@ -227,7 +235,7 @@ const menuCategories = [
     title: "Dessert & Bevande",
     items: [
       { name: "Le torte di Villa Pensabene", price: "€5.00", description: "" },
-      { name: "Tiramisù", price: "€5.00", description: "" },
+      { name: "Tiramisu", price: "€5.00", description: "" },
       { name: "Parfait di mandorle", price: "€5.00", description: "" },
       { name: "Cheesecake", price: "€5.00", description: "Frutti di Bosco, Cioccolato Fondente, Pistacchio" },
       { name: "Semifreddo rocher", price: "€5.00", description: "" },
@@ -253,7 +261,7 @@ const menuCategories = [
 export function MenuSection() {
   return (
     <section id="menu" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground">Il Nostro Menu</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
@@ -261,81 +269,35 @@ export function MenuSection() {
           </p>
         </div>
 
-        {/* Desktop View: Distributed into 2 columns to maintain horizontal order feel with independent heights */}
-        <div className="hidden md:flex md:flex-row gap-8 mb-12">
-          <div className="flex-1 space-y-8">
-            {menuCategories
-              .filter((_, i) => i % 2 === 0)
-              .map((category, index) => (
-                <Card key={index} className="p-8 bg-card">
-                  <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
-                    {category.title}
-                  </h3>
-                  <div className="space-y-6">
-                    {category.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                        <div className="flex justify-between items-start mb-2">
-                          <h4 className="font-semibold text-lg text-foreground">{item.name}</h4>
-                          <span className="text-accent font-bold text-lg whitespace-nowrap ml-4">{item.price}</span>
-                        </div>
-                        {item.description && (
-                          <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </Card>
-              ))}
-          </div>
-          <div className="flex-1 space-y-8">
-            {menuCategories
-              .filter((_, i) => i % 2 !== 0)
-              .map((category, index) => (
-                <Card key={index} className="p-8 bg-card">
-                  <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
-                    {category.title}
-                  </h3>
-                  <div className="space-y-6">
-                    {category.items.map((item, itemIndex) => (
-                      <div key={itemIndex} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                        <div className="flex justify-between items-start mb-2">
-                          <h4 className="font-semibold text-lg text-foreground">{item.name}</h4>
-                          <span className="text-accent font-bold text-lg whitespace-nowrap ml-4">{item.price}</span>
-                        </div>
-                        {item.description && (
-                          <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </Card>
-              ))}
-          </div>
-        </div>
-
-        {/* Mobile View: Single column maintaining strict sequential order */}
-        <div className="flex flex-col gap-8 mb-12 md:hidden">
+        <Accordion type="single" collapsible className="w-full space-y-4 mb-12">
           {menuCategories.map((category, index) => (
-            <Card key={index} className="p-8 bg-card">
-              <h3 className="font-serif text-3xl font-bold mb-6 text-accent border-b-2 border-accent pb-2">
-                {category.title}
-              </h3>
-              <div className="space-y-6">
-                {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-lg text-foreground">{item.name}</h4>
-                      <span className="text-accent font-bold text-lg whitespace-nowrap ml-4">{item.price}</span>
+            <AccordionItem key={index} value={`item-${index}`} className="border-none shadow-sm">
+              <AccordionTrigger className={cn(
+                "px-8 py-6 bg-card rounded-xl hover:no-underline hover:bg-accent/5 transition-all text-left group",
+                "border border-border/50 data-[state=open]:border-accent/40 data-[state=open]:rounded-b-none"
+              )}>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-accent group-hover:translate-x-1 transition-transform">
+                  {category.title}
+                </h3>
+              </AccordionTrigger>
+              <AccordionContent className="bg-card px-8 pb-8 rounded-b-xl border-x border-b border-border/50">
+                <div className="pt-6 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                  {category.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="border-b border-border/40 pb-4 last:border-0 last:pb-0">
+                      <div className="flex justify-between items-start mb-2">
+                        <h4 className="font-semibold text-lg text-foreground">{item.name}</h4>
+                        <span className="text-accent font-bold text-lg whitespace-nowrap ml-4">{item.price}</span>
+                      </div>
+                      {item.description && (
+                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                      )}
                     </div>
-                    {item.description && (
-                      <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </Card>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
 
         <div className="text-center">
           <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90" asChild>
