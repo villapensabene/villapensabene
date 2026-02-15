@@ -15,6 +15,20 @@ export function AboutSection() {
           </p>
         </div>
 
+        {/* Promotional Video */}
+        <div className="max-w-4xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+            className="w-full h-full object-cover aspect-video bg-black"
+          >
+            <source src="/agriturismo-in-citta.mp4" type="video/mp4" />
+          </video>
+        </div>
+
         {/* Sunday Menus Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Fish Menu */}
