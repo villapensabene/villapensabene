@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center">
+    <section id="home" className="relative min-h-[100dvh] flex items-center justify-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <video
