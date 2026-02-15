@@ -57,7 +57,7 @@ export function Footer() {
             <h4 className="font-serif text-xl font-bold mb-6 text-primary-foreground">Contatti</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
-                <MapPin size={20} className="text-accent shrink-0" />
+                <MapPin size={20} className="text-primary-foreground shrink-0" />
                 <span className="opacity-80">
                   Via P.40, 29<br />
                   90146 Palermo PA, Italia
@@ -66,15 +66,15 @@ export function Footer() {
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={18} className="text-accent shrink-0" />
+                <Phone size={18} className="text-primary-foreground shrink-0" />
                 <a href="tel:+393274146546" className="hover:text-accent transition-all opacity-80">327 414 6546</a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail size={18} className="text-accent shrink-0" />
+                <Mail size={18} className="text-primary-foreground shrink-0" />
                 <a href="mailto:info@villapensabene.it" className="hover:text-accent transition-all opacity-80">info@villapensabene.it</a>
               </li>
               <li className="flex items-center gap-3 pt-2">
-                <Clock size={18} className="text-accent shrink-0" />
+                <Clock size={18} className="text-primary-foreground shrink-0" />
                 <a
                   href="https://maps.app.goo.gl/99hroLSAfosUnoku6"
                   target="_blank"
