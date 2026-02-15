@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Info */}
           <div className="space-y-6">
             <Image
@@ -73,24 +73,16 @@ export function Footer() {
                 <Mail size={18} className="text-accent shrink-0" />
                 <a href="mailto:info@villapensabene.it" className="hover:text-accent transition-all opacity-80">info@villapensabene.it</a>
               </li>
-            </ul>
-          </div>
-
-          {/* Opening Hours */}
-          <div>
-            <h4 className="font-serif text-xl font-bold mb-6 text-accent">Orari di Apertura</h4>
-            <ul className="space-y-3 text-sm opacity-80">
-              <li className="flex justify-between border-b border-primary-foreground/10 pb-2">
-                <span>Lunedì</span>
-                <span className="font-medium">Chiuso</span>
-              </li>
-              <li className="flex justify-between border-b border-primary-foreground/10 pb-2">
-                <span>Mar - Sab</span>
-                <span className="font-medium">16:00 - 00:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Domenica</span>
-                <span className="font-medium">12:30 - 00:00</span>
+              <li className="flex items-center gap-3 pt-2">
+                <Clock size={18} className="text-accent shrink-0" />
+                <a
+                  href="https://maps.app.goo.gl/99hroLSAfosUnoku6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-all opacity-80 text-xs font-medium"
+                >
+                  Controlla i nostri orari di apertura
+                </a>
               </li>
             </ul>
           </div>
