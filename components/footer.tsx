@@ -39,6 +39,31 @@ export function Footer() {
               >
                 <Instagram size={20} />
               </a>
+              <a
+                href="https://www.tiktok.com/@villa.pensabene.r?_r=1&_t=ZN-93wzL2jmwcg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-gold hover:text-primary transition-all duration-300 flex items-center justify-center w-10 h-10"
+                aria-label="TikTok"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.tripadvisor.it/Restaurant_Review-g187890-d3457272-Reviews-Villa_Pensabene_Ristorante_Pizzeria-Palermo_Province_of_Palermo_Sicily.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-gold hover:text-primary transition-all duration-300 flex items-center justify-center w-10 h-10"
+                aria-label="TripAdvisor"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                  <path d="M11.99 0C5.37 0 0 5.37 0 11.99s5.37 11.99 11.99 11.99 11.99-5.37 11.99-11.99S18.61 0 11.99 0zm0 21.99c-5.51 0-9.99-4.48-9.99-9.99S6.48 2 11.99 2 22 6.48 22 11.99s-4.49 10-10.01 10z" />
+                  <path d="M15.5 12c.83 0 1.5-.67 1.5-1.5S16.33 9 15.5 9s-1.5.67-1.5 1.5.67 1.5 1.5 1.5zM8.5 12c.83 0 1.5-.67 1.5-1.5S9.33 9 8.5 9s-1.5.67-1.5 1.5.67 1.5 1.5 1.5z" />
+                  <path d="M13.25 14h-2.5c-.41 0-.75.34-.75.75s.34.75.75.75h2.5c.41 0 .75-.34.75-.75s-.34-.75-.75-.75z" />
+                </svg>
+              </a>
+
             </div>
           </div>
 
