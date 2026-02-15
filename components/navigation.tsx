@@ -31,11 +31,10 @@ export function Navigation() {
   }, [isOpen])
 
   const navLinks = [
-    { name: "Home", href: "#home" },
+    { name: "Proposta Gastronomica", href: "#about" },
     { name: "Menu", href: "#menu" },
-    { name: "Chi Siamo", href: "#about" },
     { name: "Galleria", href: "#gallery" },
-    { name: "Contatti", href: "#contact" },
+    { name: "Contatti", href: "#footer" },
   ]
 
   return (
@@ -91,7 +90,7 @@ export function Navigation() {
                 className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20"
                 asChild
               >
-                <a href="#contact">Prenota Ora</a>
+                <a href="#contact">Prenota Tavolo</a>
               </Button>
             </div>
 
@@ -128,7 +127,7 @@ export function Navigation() {
                 className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-full py-6 text-lg"
                 asChild
               >
-                <a href="#contact" onClick={() => setIsOpen(false)}>Prenota Ora</a>
+                <a href="#contact" onClick={() => setIsOpen(false)}>Prenota Tavolo</a>
               </Button>
             </div>
           )}
