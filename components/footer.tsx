@@ -42,7 +42,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-xl font-bold mb-6 text-accent">Link Utili</h4>
+            <h4 className="font-serif text-xl font-bold mb-6 text-primary-foreground">Link Utili</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="#home" className="hover:text-accent transition-all">Home</a></li>
               <li><a href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria" target="_blank" className="hover:text-accent transition-all">Il Menu</a></li>
@@ -54,7 +54,7 @@ export function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h4 className="font-serif text-xl font-bold mb-6 text-accent">Contatti</h4>
+            <h4 className="font-serif text-xl font-bold mb-6 text-primary-foreground">Contatti</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3">
                 <MapPin size={20} className="text-accent shrink-0" />
