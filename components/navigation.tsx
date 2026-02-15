@@ -66,9 +66,9 @@ export function Navigation() {
               <Image
                 src="/logo.png"
                 alt="Villa Pensabene"
-                width={180}
-                height={60}
-                className={cn("h-10 w-auto transition-transform duration-500", scrolled && "scale-90")}
+                width={240}
+                height={80}
+                className={cn("h-14 w-auto transition-transform duration-500", scrolled && "scale-90")}
               />
             </a>
 
