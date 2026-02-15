@@ -23,7 +23,7 @@ export function Footer() {
                 href="https://www.facebook.com/villapensabeneristorante/?locale=it_IT"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-gold hover:text-primary transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -32,7 +32,7 @@ export function Footer() {
                 href="https://www.instagram.com/villapensabene/?hl=it"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-gold hover:text-primary transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -44,11 +44,11 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-xl font-bold mb-6 text-primary-foreground">Link Utili</h4>
             <ul className="space-y-3 text-sm">
-              <li><a href="#home" className="hover:text-accent transition-all">Home</a></li>
-              <li><a href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria" target="_blank" className="hover:text-accent transition-all">Il Menu</a></li>
-              <li><a href="#about" className="hover:text-accent transition-all">Chi Siamo</a></li>
-              <li><a href="#gallery" className="hover:text-accent transition-all">Galleria</a></li>
-              <li><a href="#contact" className="hover:text-accent transition-all font-semibold">Prenota Tavolo</a></li>
+              <li><a href="#home" className="hover:text-gold transition-all">Home</a></li>
+              <li><a href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria" target="_blank" className="hover:text-gold transition-all">Il Menu</a></li>
+              <li><a href="#about" className="hover:text-gold transition-all">Chi Siamo</a></li>
+              <li><a href="#gallery" className="hover:text-gold transition-all">Galleria</a></li>
+              <li><a href="#contact" className="hover:text-gold transition-all font-semibold">Prenota Tavolo</a></li>
             </ul>
           </div>
 
@@ -67,11 +67,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary-foreground shrink-0" />
-                <a href="tel:+393274146546" className="hover:text-accent transition-all opacity-80">327 414 6546</a>
+                <a href="tel:+393274146546" className="hover:text-gold transition-all opacity-80">327 414 6546</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary-foreground shrink-0" />
-                <a href="mailto:info@villapensabene.it" className="hover:text-accent transition-all opacity-80">info@villapensabene.it</a>
+                <a href="mailto:info@villapensabene.it" className="hover:text-gold transition-all opacity-80">info@villapensabene.it</a>
               </li>
               <li className="flex items-center gap-3 pt-2">
                 <Clock size={18} className="text-primary-foreground shrink-0" />
@@ -79,7 +79,7 @@ export function Footer() {
                   href="https://maps.app.goo.gl/99hroLSAfosUnoku6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-accent transition-all opacity-80 text-xs font-medium"
+                  className="hover:text-gold transition-all opacity-80 text-xs font-medium"
                 >
                   Controlla i nostri orari di apertura
                 </a>
