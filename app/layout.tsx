@@ -8,8 +8,13 @@ const _geist = Geist({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"] })
 
 export const viewport = {
-  themeColor: "#8B2635",
+  themeColor: "#8B2630",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
+
 
 export const metadata: Metadata = {
   title: "Villa Pensabene - Ristorante Pizzeria",
@@ -36,9 +41,16 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
+    statusBarStyle: "black-translucent",
     title: "Villa Pensabene",
+    startupImage: [
+      {
+        url: "/icon-512x512.png",
+        media: "(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)",
+      },
+    ],
   },
+
   formatDetection: {
     telephone: false,
   },
