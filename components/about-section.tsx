@@ -128,6 +128,91 @@ export function AboutSection() {
           </div>
         </div>
 
+        {/* Giro Pasta Section */}
+        <div className="bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl border border-white/10 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-accent/5 rounded-full -ml-32 -mt-32 blur-3xl" />
+
+          <div className="relative z-10">
+            <div className="text-center mb-12">
+              <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">Novità a Villa Pensabene</span>
+              <h3 className="font-serif text-3xl md:text-4xl font-bold mb-6">{"Il nostro \"Giro Pasta\" 🍝"}</h3>
+              <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed italic">
+                {"\"Gentili ospiti, siamo lieti di presentarvi il nostro Giro Pasta! Un'esperienza culinaria completa che inizia con i nostri deliziosi antipasti e prosegue con la scelta delle nostre migliori specialità.\""}
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Appetizers */}
+              <div className="lg:col-span-1">
+                <h4 className="font-serif text-xl font-bold mb-6 text-accent flex items-center gap-2">
+                  <Utensils size={20} /> Gli Antipasti
+                </h4>
+                <ul className="space-y-4">
+                  {[
+                    "Antipasto caldo",
+                    "Sfincionello tipico",
+                    "Focaccine alla milza",
+                    "Focaccine con ricotta",
+                    "Focaccine porchetta e cipolla"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-muted-foreground bg-secondary/30 p-3 rounded-lg border border-white/5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      <span className="text-sm font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Pasta Selection */}
+              <div className="lg:col-span-2">
+                <h4 className="font-serif text-xl font-bold mb-6 text-accent flex items-center gap-2">
+                  <Sparkles size={20} /> I Primi (Scegline 4 portate)
+                </h4>
+                <div className="grid md:grid-cols-2 gap-3">
+                  {[
+                    "Penne alla Boscaiola",
+                    "Rigatoni alla Carbonara",
+                    "Mezze maniche all'Amatriciana",
+                    "Casarecce Salsiccia e Funghi",
+                    "Farfallette al Salmone",
+                    "Fusilli Zucca, Scamorza e Speck",
+                    "Tortiglioni Pistacchiosa",
+                    "Gnocchi ai 4 Formaggi"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 p-3 bg-secondary/50 rounded-xl border border-white/10 group hover:border-accent/40 transition-colors">
+                      <span className="text-accent font-bold text-xs">{i + 1}</span>
+                      <span className="text-sm font-bold group-hover:text-foreground transition-colors">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Bottom Conditions */}
+            <div className="mt-12 pt-12 border-t border-white/5 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="flex flex-col items-center text-center p-4 bg-accent/5 rounded-2xl border border-accent/10">
+                <span className="text-accent font-bold text-2xl mb-1">20€</span>
+                <span className="text-xs uppercase font-medium text-muted-foreground">A Persona</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-4 bg-secondary/30 rounded-2xl">
+                <Utensils className="text-accent mb-2" size={20} />
+                <span className="text-xs font-bold uppercase tracking-tight">Bevande Incluse</span>
+                <span className="text-[10px] text-muted-foreground uppercase">Acqua, Coca Cola, Birra</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-4 bg-secondary/30 rounded-2xl">
+                <Clock className="text-accent mb-2" size={20} />
+                <span className="text-xs font-bold uppercase tracking-tight">Tutta la settimana</span>
+                <span className="text-[10px] text-muted-foreground uppercase">Domenica inclusa</span>
+              </div>
+              <div className="flex flex-col items-center text-center p-4 bg-secondary/30 rounded-2xl">
+                <Baby className="text-accent mb-2" size={20} />
+                <span className="text-xs font-bold uppercase tracking-tight">Minimo 8 Adulti</span>
+                <span className="text-[10px] text-muted-foreground uppercase">Prenotazione obbligatoria</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Special Events Section */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
