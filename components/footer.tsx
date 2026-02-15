@@ -1,68 +1,29 @@
-import { Facebook, Instagram, Mail, Phone } from "lucide-react"
+import { Facebook, Instagram, Mail, Phone, MapPin, Clock } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand Info */}
+          <div className="space-y-6">
             <Image
               src="/logo.png"
               alt="Villa Pensabene"
-              width={180}
-              height={60}
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              width={200}
+              height={70}
+              className="h-14 w-auto brightness-0 invert"
             />
-            <p className="text-sm leading-relaxed opacity-90">
-              {"Autentica cucina italiana dal 1985. Tradizione, qualità e passione in ogni piatto."}
+            <p className="text-sm leading-relaxed opacity-80">
+              {"Autentica cucina siciliana, tradizione e passione dal 1985. Un luogo dove sentirsi a casa, nel cuore di Palermo."}
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-serif text-xl font-bold mb-4">Link Utili</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#home" className="hover:text-accent transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
-                  Menu
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-accent transition-colors">
-                  Chi Siamo
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" className="hover:text-accent transition-colors">
-                  Galleria
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-accent transition-colors">
-                  Contatti
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-serif text-xl font-bold mb-4">Seguici</h4>
-            <div className="flex gap-4 mb-4">
+            <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/villapensabeneristorante/?locale=it_IT"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-foreground/10 p-2 rounded-full hover:bg-accent transition-colors"
+                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -71,26 +32,67 @@ export function Footer() {
                 href="https://www.instagram.com/villapensabene/?hl=it"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-foreground/10 p-2 rounded-full hover:bg-accent transition-colors"
+                className="bg-primary-foreground/10 p-2.5 rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
             </div>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-2">
-                <Phone size={16} />
-                <a href="tel:+393274146546" className="hover:text-accent transition-colors">
-                  327 414 6546
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail size={16} />
-                <a href="mailto:info@villapensabene.it" className="hover:text-accent transition-colors">
-                  info@villapensabene.it
-                </a>
-              </div>
-            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-serif text-xl font-bold mb-6 text-accent">Link Utili</h4>
+            <ul className="space-y-3 text-sm">
+              <li><a href="#home" className="hover:text-accent transition-all">Home</a></li>
+              <li><a href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria" target="_blank" className="hover:text-accent transition-all">Il Menu</a></li>
+              <li><a href="#about" className="hover:text-accent transition-all">Chi Siamo</a></li>
+              <li><a href="#gallery" className="hover:text-accent transition-all">Galleria</a></li>
+              <li><a href="#contact" className="hover:text-accent transition-all font-semibold">Prenota Tavolo</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div>
+            <h4 className="font-serif text-xl font-bold mb-6 text-accent">Contatti</h4>
+            <ul className="space-y-4 text-sm">
+              <li className="flex gap-3">
+                <MapPin size={20} className="text-accent shrink-0" />
+                <span className="opacity-80">
+                  Via P.40, 29<br />
+                  90146 Palermo PA, Italia
+                  <br />
+                  <a href="https://maps.app.goo.gl/ErK4fypQzfVWmpL1A" target="_blank" className="text-accent hover:underline text-xs mt-1 block">Indicazioni Stradali →</a>
+                </span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={18} className="text-accent shrink-0" />
+                <a href="tel:+393274146546" className="hover:text-accent transition-all opacity-80">327 414 6546</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={18} className="text-accent shrink-0" />
+                <a href="mailto:info@villapensabene.it" className="hover:text-accent transition-all opacity-80">info@villapensabene.it</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Opening Hours */}
+          <div>
+            <h4 className="font-serif text-xl font-bold mb-6 text-accent">Orari di Apertura</h4>
+            <ul className="space-y-3 text-sm opacity-80">
+              <li className="flex justify-between border-b border-primary-foreground/10 pb-2">
+                <span>Lunedì</span>
+                <span className="font-medium">Chiuso</span>
+              </li>
+              <li className="flex justify-between border-b border-primary-foreground/10 pb-2">
+                <span>Mar - Sab</span>
+                <span className="font-medium">16:00 - 00:00</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Domenica</span>
+                <span className="font-medium">12:30 - 00:00</span>
+              </li>
+            </ul>
           </div>
         </div>
 

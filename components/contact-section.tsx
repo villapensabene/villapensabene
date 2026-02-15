@@ -46,82 +46,18 @@ Note: ${message || "Nessuna nota aggiuntiva"}`
     <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground">Contatti e Orari</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground">Prenota un Tavolo</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            {"Vieni a trovarci o contattaci per prenotare il tuo tavolo"}
+            {"Assicurati il tuo posto in Villa per una serata indimenticabile. Riceverai conferma immediata su WhatsApp."}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-6">
-            <Card className="p-6 bg-card flex items-start gap-4">
-              <MapPin className="text-accent flex-shrink-0" size={32} />
-              <div>
-                <h3 className="font-bold text-lg mb-2 text-foreground">Indirizzo</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Via P.40, 29
-                  <br />
-                  90146 Palermo PA, Italia
-                </p>
-                <a
-                  href="https://maps.app.goo.gl/ErK4fypQzfVWmpL1A"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline inline-block mt-2"
-                >
-                  Visualizza su Google Maps →
-                </a>
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-card flex items-start gap-4">
-              <Phone className="text-accent flex-shrink-0" size={32} />
-              <div>
-                <h3 className="font-bold text-lg mb-2 text-foreground">Telefono</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  <a href="tel:+393274146546" className="hover:text-accent transition-colors">
-                    327 414 6546
-                  </a>
-                </p>
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-card flex items-start gap-4">
-              <Mail className="text-accent flex-shrink-0" size={32} />
-              <div>
-                <h3 className="font-bold text-lg mb-2 text-foreground">Email</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  <a href="mailto:info@villapensabene.it" className="hover:text-accent transition-colors">
-                    info@villapensabene.it
-                  </a>
-                </p>
-              </div>
-            </Card>
-
-            <Card className="p-6 bg-card flex items-start gap-4">
-              <Clock className="text-accent flex-shrink-0" size={32} />
-              <div>
-                <h3 className="font-bold text-lg mb-2 text-foreground">Orari di Apertura</h3>
-                <div className="text-muted-foreground space-y-1 leading-relaxed">
-                  <p>
-                    <span className="font-semibold text-foreground">Lun:</span> Chiuso
-                  </p>
-                  <p>
-                    <span className="font-semibold text-foreground">Mar - Sab:</span> 16:00 - 00:00
-                  </p>
-                  <p>
-                    <span className="font-semibold text-foreground">Domenica:</span> 12:30 - 00:00
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
+        <div className="max-w-2xl mx-auto">
           {/* Reservation Form */}
-          <Card className="p-8 bg-card">
-            <h3 className="font-serif text-2xl font-bold mb-6 text-foreground">Prenota un Tavolo</h3>
+          <Card className="p-8 bg-card shadow-xl border border-border/50">
+            <h3 className="font-serif text-2xl font-bold mb-6 text-foreground">Modulo di Prenotazione</h3>
             <form className="space-y-4" onSubmit={handleSubmit}>
+              {/* ... form fields remain same ... */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                   Nome e Cognome
