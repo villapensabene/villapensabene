@@ -11,9 +11,18 @@ export function HeroSection() {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover"
+          className="hidden md:block w-full h-full object-cover"
         >
           <source src="/bg-video.mp4" type="video/mp4" />
+        </video>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="block md:hidden w-full h-full object-cover"
+        >
+          <source src="/bg-video-mobile.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-foreground/50" />
       </div>
