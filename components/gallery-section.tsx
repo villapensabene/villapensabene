@@ -1,5 +1,28 @@
+import * as React from "react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel"
+
 export function GallerySection() {
+  const [api, setApi] = React.useState<CarouselApi>()
+
+  React.useEffect(() => {
+    if (!api) return
+
+    const intervalId = setInterval(() => {
+      api.scrollNext()
+    }, 4000)
+
+    return () => clearInterval(intervalId)
+  }, [api])
+
   const images = [
+    // ... same images array
     { url: "/dishes/villa_001.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_002.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_003.jpg", alt: "Piatto Villa Pensabene" },
@@ -37,8 +60,6 @@ export function GallerySection() {
     { url: "/dishes/villa_035.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_036.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_037.jpg", alt: "Piatto Villa Pensabene" },
-    { url: "/dishes/villa_038.jpg", alt: "Piatto Villa Pensabene" },
-    { url: "/dishes/villa_039.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_040.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_041.jpg", alt: "Piatto Villa Pensabene" },
     { url: "/dishes/villa_042.jpg", alt: "Piatto Villa Pensabene" },
@@ -49,7 +70,7 @@ export function GallerySection() {
   ]
 
   return (
-    <section id="gallery" className="py-20 bg-secondary">
+    <section id="gallery" className="py-20 bg-secondary overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-foreground">Galleria</h2>
@@ -58,17 +79,33 @@ export function GallerySection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {images.map((image, index) => (
-            <div key={index} className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg group">
-              <img
-                src={image.url || "/placeholder.svg"}
-                alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors" />
+        <div className="relative px-12 lg:px-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {images.map((image, index) => (
+                <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg group bg-background">
+                    <img
+                      src={image.url || "/placeholder.svg"}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden md:block">
+              <CarouselPrevious className="absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 size-12 bg-background border-border hover:bg-accent hover:text-accent-foreground shadow-xl transition-all" />
+              <CarouselNext className="absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 size-12 bg-background border-border hover:bg-accent hover:text-accent-foreground shadow-xl transition-all" />
             </div>
-          ))}
+          </Carousel>
         </div>
       </div>
     </section>
