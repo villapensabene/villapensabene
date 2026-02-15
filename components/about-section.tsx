@@ -227,6 +227,123 @@ export function AboutSection() {
           </div>
         </div>
 
+        {/* Giro Pizza Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">Serata Pizza</span>
+            <h3 className="font-serif text-3xl md:text-4xl font-bold mb-6">{"I nostri \"Giro Pizza\" 🍕"}</h3>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed italic">
+              {"Scegli la formula perfetta per la tua serata in compagnia. Pizze artigianali a volontà e tutto il gusto della tradizione."}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Formula €15 */}
+            <Card className="relative overflow-hidden border-none shadow-2xl bg-card transition-transform hover:scale-[1.01] duration-300">
+              <div className="absolute top-0 right-0 p-6 z-10">
+                <span className="bg-accent text-accent-foreground px-5 py-1.5 rounded-full font-bold shadow-lg text-lg">15,00€</span>
+              </div>
+              <div className="p-8 md:p-12 h-full flex flex-col">
+                <h4 className="font-serif text-2xl font-bold mb-8 flex items-center gap-3">
+                  <Utensils className="text-accent" size={24} /> Giro Pizza Base
+                </h4>
+
+                <div className="space-y-8 flex-grow">
+                  <div>
+                    <h5 className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Antipasti inclusi</h5>
+                    <ul className="space-y-3">
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent/60" />
+                        <span className="text-sm font-medium">Antipasto Caldo</span>
+                      </li>
+                      <li className="flex items-center gap-3 text-muted-foreground">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent/60" />
+                        <span className="text-sm font-medium">Sfincionello Palermitano</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h5 className="text-accent font-bold uppercase tracking-widest text-xs mb-4">La Pizza</h5>
+                    <div className="bg-secondary/30 p-4 rounded-xl border border-white/5">
+                      <p className="text-sm font-bold text-foreground leading-snug">Giro Pizze tra le nostre diverse varietà a volontà</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h5 className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Bevande</h5>
+                    <ul className="grid grid-cols-1 gap-2">
+                      <li className="text-xs text-muted-foreground flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground" /> Coca Cola 1L (1 ogni 4 pers.)
+                      </li>
+                      <li className="text-xs text-muted-foreground flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground" /> Birra 66cl (1 ogni 3 pers.)
+                      </li>
+                      <li className="text-xs text-muted-foreground flex items-center gap-2 font-bold text-accent/80">
+                        <span className="w-1 h-1 rounded-full bg-accent" /> Acqua Libera
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Formula €18 */}
+            <Card className="relative overflow-hidden border-none shadow-2xl bg-card border-t-4 border-accent transition-transform hover:scale-[1.01] duration-300">
+              <div className="absolute top-0 right-0 p-6 z-10">
+                <span className="bg-accent text-accent-foreground px-5 py-1.5 rounded-full font-bold shadow-lg text-lg">18,00€</span>
+              </div>
+              <div className="p-8 md:p-12 h-full flex flex-col">
+                <h4 className="font-serif text-2xl font-bold mb-8 flex items-center gap-3">
+                  <Sparkles className="text-accent" size={24} /> Giro Pizza Completo
+                </h4>
+
+                <div className="space-y-8 flex-grow">
+                  <div>
+                    <h5 className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Antipasti Rinforzati</h5>
+                    <ul className="grid grid-cols-2 gap-3">
+                      {[
+                        "Antipasto Caldo",
+                        "Bruschette Classiche",
+                        "Sfincionello tipico",
+                        "Focaccine Miste"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-2 text-muted-foreground">
+                          <div className="w-1 h-1 rounded-full bg-accent/60" />
+                          <span className="text-xs font-medium">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-[10px] text-muted-foreground/60 italic mt-3">*Focaccine: Ricotta, Porchetta, Panelline</p>
+                  </div>
+
+                  <div>
+                    <h5 className="text-accent font-bold uppercase tracking-widest text-xs mb-4">La Pizza</h5>
+                    <div className="bg-accent/5 p-4 rounded-xl border border-accent/10">
+                      <p className="text-sm font-bold text-foreground leading-snug">Giro Pizze tra le nostre diverse varietà a volontà</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h5 className="text-accent font-bold uppercase tracking-widest text-xs mb-4">Bevande</h5>
+                    <ul className="grid grid-cols-1 gap-2">
+                      <li className="text-xs text-muted-foreground flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground" /> Coca Cola 1L (1 ogni 4 pers.)
+                      </li>
+                      <li className="text-xs text-muted-foreground flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-muted-foreground" /> Birra 66cl (1 ogni 3 pers.)
+                      </li>
+                      <li className="text-xs text-muted-foreground flex items-center gap-2 font-bold text-accent/80">
+                        <span className="w-1 h-1 rounded-full bg-accent" /> Acqua Libera
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+
         {/* Special Events Section */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
