@@ -155,14 +155,14 @@ export function AboutSection() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: <Baby className="text-accent" />, title: "Battesimi" },
-              { icon: <Cake className="text-accent" />, title: "Compleanni" },
-              { icon: <Wine className="text-accent" />, title: "Cerimonie" },
-              { icon: <PartyPopper className="text-accent" />, title: "Feste Private" },
+              { icon: <Baby />, title: "Battesimi" },
+              { icon: <Cake />, title: "Compleanni" },
+              { icon: <Wine />, title: "Cerimonie" },
+              { icon: <PartyPopper />, title: "Feste Private" },
             ].map((event, i) => (
               <Card key={i} className="p-6 border-none shadow-lg hover:translate-y-[-5px] transition-all duration-300 group">
                 <div className="flex justify-center mb-4">
-                  <div className="bg-secondary p-4 rounded-full group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
+                  <div className="bg-secondary p-4 rounded-full text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
                     {event.icon}
                   </div>
                 </div>
