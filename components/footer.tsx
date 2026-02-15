@@ -88,8 +88,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm opacity-75">
-          <div className="text-center md:text-left">
+        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col items-center gap-8 text-sm opacity-75">
+          <div className="text-center">
             <p>© 2026 Villa Pensabene Ristorante Pizzeria. Tutti i diritti riservati.</p>
             <p className="mt-1 text-xs opacity-70">P.IVA IT06636480821</p>
           </div>
@@ -112,6 +112,7 @@ export function Footer() {
             </a>
           </div>
         </div>
+
       </div>
     </footer>
   )
