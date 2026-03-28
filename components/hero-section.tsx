@@ -42,7 +42,7 @@ export function HeroSection() {
             className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center gap-3 w-full sm:w-auto"
             asChild
           >
-            <a href="#contact">
+            <a href="#prenota">
               <span className="bg-accent-foreground/10 p-1.5 rounded-full">
                 <Calendar size={18} />
               </span>

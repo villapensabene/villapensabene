@@ -75,7 +75,7 @@ export function Footer() {
               <li><a href="https://gofoodmenu.it/villa-pensabene-ristorante-pizzeria" target="_blank" className="hover:text-gold transition-all">Il Menu</a></li>
               <li><a href="#about" className="hover:text-gold transition-all">Chi Siamo</a></li>
               <li><a href="#gallery" className="hover:text-gold transition-all">Galleria</a></li>
-              <li><a href="#contact" className="hover:text-gold transition-all font-semibold">Prenota Tavolo</a></li>
+              <li><a href="#prenota" className="hover:text-gold transition-all font-semibold">Prenota Tavolo</a></li>
             </ul>
           </div>
 

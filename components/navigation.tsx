@@ -91,7 +91,7 @@ export function Navigation() {
                 className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 shadow-lg shadow-accent/20"
                 asChild
               >
-                <a href="#contact">Prenota Tavolo</a>
+                <a href="#prenota">Prenota Tavolo</a>
               </Button>
             </div>
 
@@ -128,7 +128,7 @@ export function Navigation() {
                 className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-full py-6 text-lg"
                 asChild
               >
-                <a href="#contact" onClick={() => setIsOpen(false)}>Prenota Tavolo</a>
+                <a href="#prenota" onClick={() => setIsOpen(false)}>Prenota Tavolo</a>
               </Button>
             </div>
           )}
