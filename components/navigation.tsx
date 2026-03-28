@@ -32,6 +32,7 @@ export function Navigation() {
 
   const navLinks = [
     { name: "Proposta Gastronomica", href: "#about" },
+    { name: "Speciale Pasqua 🌿", href: "#pasqua" },
     { name: "Menu", href: "#menu" },
     { name: "Galleria", href: "#gallery" },
     { name: "Contatti", href: "#footer" },
