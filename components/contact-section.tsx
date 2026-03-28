@@ -39,7 +39,7 @@ Nome: ${name}
 Formula: ${event}
 Data: ${date}
 Ora: ${time}
-Ospiti: ${finalGuests}${childrenInfo}
+Ospiti Adulti: ${finalGuests}${childrenInfo}
 Telefono Cliente: ${phone}
 -------------------------
 Allergie/Note: ${message || "Nessuna segnalazione"}`
