@@ -122,7 +122,7 @@ Allergie/Note: ${message || "Nessuna segnalazione"}`
                   <option value="Giro Pizza">Giro Pizza</option>
                   <option value="Giro Pasta">Giro Pasta</option>
                   <option value="Pranzo della Domenica (Agriturismo in città)">Pranzo della Domenica (Agriturismo in città)</option>
-                  <option value="Speciale: Pranzo di Pasqua">Speciale: Pranzo di Pasqua 🌿</option>
+                  <option value="Speciale: 1 Maggio">Speciale: 1 Maggio 🌿</option>
                   <option value="Evento Privato (Festa / Cerimonia)">Evento Privato (Festa / Cerimonia)</option>
                 </select>
               </div>

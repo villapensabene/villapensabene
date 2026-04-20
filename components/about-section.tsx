@@ -358,8 +358,8 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Evento Pasqua Section */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl border border-white/10 relative overflow-hidden" id="pasqua">
+        {/* Evento 1° Maggio Section */}
+        <div className="bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl border border-white/10 relative overflow-hidden" id="1maggio">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none" />
 
@@ -368,131 +368,33 @@ export function AboutSection() {
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div className="text-left text-center lg:text-left">
                 <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">Evento Speciale</span>
-                <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6 text-foreground">{"🌿 La Pasqua a Villa Pensabene è speciale!!"}</h3>
+                <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6 text-foreground">{"🌻 Pranzo del 1° Maggio"}</h3>
                 <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  {"Abbiamo preparato due menù speciali per far vivere la festa come si deve — con sapori autentici, ingredienti di qualità e tutta la gioia della tavola siciliana."}
+                  {"Celebra la Festa dei Lavoratori a Villa Pensabene! Un'occasione perfetta per rilassarsi e gustare l'ottima cucina siciliana immersi nel verde del nostro agriturismo in città, godendosi una giornata all'insegna della convivialità e del buon cibo."}
                 </p>
                 {/* Event details summary */}
                 <div className="flex flex-col gap-4 items-center lg:items-start">
                   <div className="flex items-center gap-3 px-6 py-3 bg-secondary/50 rounded-full border border-white/5 shadow-sm">
                     <Clock className="text-accent" size={20} />
-                    <span className="text-sm font-bold">Disponibile a pranzo e cena</span>
+                    <span className="text-sm font-bold">Pranzo del 1° Maggio</span>
                   </div>
                   <div className="flex items-center gap-3 px-6 py-3 bg-secondary/50 rounded-full border border-white/5 shadow-sm">
                     <ScrollText className="text-accent" size={20} />
-                    <span className="text-sm font-bold">Solo su prenotazione</span>
+                    <span className="text-sm font-bold">Prenotazione consigliata</span>
                   </div>
                 </div>
               </div>
               
-              <div className="relative mx-auto w-full max-w-sm">
+              <div className="relative mx-auto w-full max-w-md">
                 <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full" />
-                <img src="/events/pasqua2026/1.png" alt="Locandina Pranzo di Pasqua" className="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10 hover:scale-[1.02] transition-transform duration-500" />
+                <img src="/events/1maggio/Pranzo del Maggio (1).png" alt="Locandina Pranzo 1 Maggio" className="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10 hover:scale-[1.02] transition-transform duration-500" />
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              {/* Menu Pesce */}
-              <Card className="relative overflow-hidden group border-none shadow-xl bg-secondary/30 transition-all hover:bg-secondary/40 duration-300">
-                <div className="absolute top-0 right-0 p-6 z-10">
-                  <span className="bg-accent text-accent-foreground px-5 py-2 rounded-full font-bold shadow-lg text-lg">50€</span>
-                </div>
-                <div className="grid xl:grid-cols-2 gap-0 border-t-4 border-blue-500/50 h-full">
-                  <div className="p-6 xl:pe-0 flex items-center justify-center bg-black/10">
-                    <img src="/events/pasqua2026/2.png" alt="Locandina Menu Pesce" className="w-full max-w-[280px] h-auto rounded-xl shadow-lg border border-white/5 group-hover:scale-[1.03] transition-transform duration-500" />
-                  </div>
-                  <div className="p-8 h-full flex flex-col justify-center">
-                    <h4 className="font-serif text-2xl font-bold mb-2 flex items-center gap-2">
-                      <Waves className="text-blue-400" size={24} /> Menù Pesce
-                    </h4>
-                    <h5 className="text-muted-foreground uppercase tracking-wider text-xs mb-8">Profumo di Mare</h5>
-                    
-                    <div className="space-y-6 text-sm">
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Antipasti</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Insalata del Mediterraneo · Caponatina di Pesce Spada · Fagottino di Salmone con Fiocchi di Bufala · Cocktail di Gamberi e Ananas
-                        </p>
-                      </div>
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Primi</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Paccheri con Ragù di Cerniotto, Fondo di Crostacei e Finocchietto di Montagna · Risotto con Pesto di Zucchinette, Gambero e Mandorle Tostate
-                        </p>
-                      </div>
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Secondi</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Calamaro Ripieno con Julienne di Verdurine e Tartare di Gambero · Tortino di Spinaci al Burro
-                        </p>
-                      </div>
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Dessert</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Tronchetto di Ricotta e Fonduta di Cioccolata
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Menu Carne */}
-              <Card className="relative overflow-hidden group border-none shadow-xl bg-secondary/30 transition-all hover:bg-secondary/40 duration-300">
-                <div className="absolute top-0 right-0 p-6 z-10">
-                  <span className="bg-accent text-accent-foreground px-5 py-2 rounded-full font-bold shadow-lg text-lg">45€</span>
-                </div>
-                <div className="grid xl:grid-cols-2 gap-0 border-t-4 border-amber-600/50 h-full">
-                  <div className="p-6 xl:pe-0 flex items-center justify-center bg-black/10">
-                    <img src="/events/pasqua2026/3.png" alt="Locandina Menu Carne" className="w-full max-w-[280px] h-auto rounded-xl shadow-lg border border-white/5 group-hover:scale-[1.03] transition-transform duration-500" />
-                  </div>
-                  <div className="p-8 h-full flex flex-col justify-center">
-                    <h4 className="font-serif text-2xl font-bold mb-2 flex items-center gap-2">
-                      <TreePine className="text-amber-500" size={24} /> Menù Carne
-                    </h4>
-                    <h5 className="text-muted-foreground uppercase tracking-wider text-xs mb-8">I Sapori della Terra</h5>
-                    
-                    <div className="space-y-6 text-sm">
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Antipasti</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Polpettine di Zucca e Salsiccia · Fagottino di Bresaola con Rucola e Stracchino · Caponatina di Ortaggi · Tuma al Pistacchio · Bruschetta con Lardo di Colonnata e Miele
-                        </p>
-                      </div>
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Primi</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Paccheri al Ragù dei Nebrodi · Riso Carnaroli con Dadolata di Zucchinette, Guanciale e Fonduta di Parmigiano
-                        </p>
-                      </div>
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Secondo</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Fagotto di Vitellina Mandorlato con Speck e Scamorza Affumicata · Patate Aromatizzate
-                        </p>
-                      </div>
-                      <div>
-                        <h6 className="text-accent font-bold mb-2 uppercase text-xs tracking-widest">Dessert</h6>
-                        <p className="text-muted-foreground leading-relaxed">
-                          Tronchetto di Ricotta e Fonduta di Cioccolata
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            </div>
-
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="flex-1 bg-secondary/40 rounded-2xl p-6 text-center border border-white/5 flex flex-col items-center justify-center">
-                <Wine className="text-accent mb-3" size={28} />
-                <span className="text-sm font-bold uppercase tracking-widest text-foreground block mb-2">Bevande Incluse</span>
-                <span className="text-sm text-muted-foreground">Acqua · Coca Cola · Vino Cantine Mokarta</span>
-              </div>
-              
-              <div className="flex-1 bg-accent/10 rounded-2xl p-6 text-center border border-accent/20 flex flex-col items-center justify-center">
+            <div className="flex justify-center mt-8">
+              <div className="w-full max-w-md bg-accent/10 rounded-2xl p-6 text-center border border-accent/20 flex flex-col items-center justify-center">
                 <span className="text-sm font-bold uppercase tracking-widest text-foreground block mb-3">Prenota il tuo tavolo</span>
-                <a href="tel:+393274146546" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
+                <a href="tel:+393274146546" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg text-lg">
                   Chiama 327 414 6546
                 </a>
               </div>
