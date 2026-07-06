@@ -32,8 +32,7 @@ export function Navigation() {
 
   const navLinks = [
     { name: "Proposta Gastronomica", href: "#about" },
-    { name: "1 Maggio 🌿", href: "#1maggio" },
-    { name: "Menu", href: "#menu" },
+{ name: "Menu", href: "#menu" },
     { name: "Galleria", href: "#gallery" },
     { name: "Contatti", href: "#footer" },
   ]

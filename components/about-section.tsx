@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card"
-import { Utensils, Waves, TreePine, Baby, Clock, ScrollText, Sparkles, PartyPopper, Cake, Wine } from "lucide-react"
+import { Utensils, Waves, TreePine, Baby, Clock, ScrollText, Sparkles, PartyPopper, Cake, Wine, Sun, Phone } from "lucide-react"
 
 export function AboutSection() {
   return (
@@ -39,6 +39,17 @@ export function AboutSection() {
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed italic">
                 {"Vivi l'esperienza di un vero agriturismo senza lasciare Palermo. Prenota il tuo tavolo per la domenica e goditi un pranzo indimenticabile con tutta la famiglia."}
               </p>
+            </div>
+
+            {/* Summer break notice */}
+            <div className="max-w-2xl mx-auto mb-10 flex items-start gap-4 bg-amber-50/10 border border-amber-400/30 rounded-2xl px-6 py-5">
+              <Sun className="text-amber-400 shrink-0 mt-0.5" size={22} />
+              <div>
+                <p className="font-bold text-amber-300 text-sm uppercase tracking-wider mb-1">Pausa Estiva — Giugno / Settembre</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {"Il pranzo della domenica va in vacanza durante il periodo estivo. Ci rivediamo a settembre con tutta la nostra proposta domenicale!"}
+                </p>
+              </div>
             </div>
 
             {/* Promotional Video */}
@@ -358,50 +369,6 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Evento 1° Maggio Section */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl border border-white/10 relative overflow-hidden" id="1maggio">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none" />
-
-          <div className="relative z-10">
-            {/* Main Header with Poster */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-              <div className="text-left text-center lg:text-left">
-                <span className="text-accent font-medium tracking-widest uppercase text-sm mb-2 block">Evento Speciale</span>
-                <h3 className="font-serif text-3xl md:text-5xl font-bold mb-6 text-foreground">{"🌻 Pranzo del 1° Maggio"}</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                  {"Celebra la Festa dei Lavoratori a Villa Pensabene! Un'occasione perfetta per rilassarsi e gustare l'ottima cucina siciliana immersi nel verde del nostro agriturismo in città, godendosi una giornata all'insegna della convivialità e del buon cibo."}
-                </p>
-                {/* Event details summary */}
-                <div className="flex flex-col gap-4 items-center lg:items-start">
-                  <div className="flex items-center gap-3 px-6 py-3 bg-secondary/50 rounded-full border border-white/5 shadow-sm">
-                    <Clock className="text-accent" size={20} />
-                    <span className="text-sm font-bold">Pranzo del 1° Maggio</span>
-                  </div>
-                  <div className="flex items-center gap-3 px-6 py-3 bg-secondary/50 rounded-full border border-white/5 shadow-sm">
-                    <ScrollText className="text-accent" size={20} />
-                    <span className="text-sm font-bold">Prenotazione consigliata</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="relative mx-auto w-full max-w-md">
-                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full" />
-                <img src="/events/1maggio/Pranzo del Maggio (1).png" alt="Locandina Pranzo 1 Maggio" className="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10 hover:scale-[1.02] transition-transform duration-500" />
-              </div>
-            </div>
-
-            <div className="flex justify-center mt-8">
-              <div className="w-full max-w-md bg-accent/10 rounded-2xl p-6 text-center border border-accent/20 flex flex-col items-center justify-center">
-                <span className="text-sm font-bold uppercase tracking-widest text-foreground block mb-3">Prenota il tuo tavolo</span>
-                <a href="tel:+393274146546" className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg text-lg">
-                  Chiama 327 414 6546
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Special Events Section */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
@@ -445,6 +412,76 @@ export function AboutSection() {
             ))}
           </div>
         </div>
+
+        {/* Compleanni dei Bambini nel Gazebo */}
+        <div className="mt-4 bg-card rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 rounded-full -mr-40 -mt-40 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
+              <Sparkles size={16} />
+              <span>Novità — Da Settembre</span>
+            </div>
+
+            <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              Compleanni nel Gazebo 🎂✨
+            </h2>
+
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed mb-3 font-medium">
+              Hai sentito la novità?
+            </p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+              {"Da settembre, i compleanni dei tuoi piccoli trovano la loro location perfetta. Un gazebo incantato, solo per loro — palloncini, torta, sorrisi. E tu che guardi tutto senza pensare a niente. Perché ci pensiamo noi."}
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+              <div className="flex items-center gap-4 p-5 bg-secondary/30 rounded-2xl border border-white/5">
+                <span className="text-3xl">👑</span>
+                <div className="text-left">
+                  <p className="font-bold text-foreground text-sm">Per la tua piccola principessa</p>
+                  <p className="text-muted-foreground text-xs mt-1">Un giorno da regina nel nostro gazebo</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 p-5 bg-secondary/30 rounded-2xl border border-white/5">
+                <span className="text-3xl">🦸</span>
+                <div className="text-left">
+                  <p className="font-bold text-foreground text-sm">Per il tuo piccolo ometto</p>
+                  <p className="text-muted-foreground text-xs mt-1">Un party da supereroe da ricordare</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Promo Video */}
+            <div className="max-w-sm mx-auto mb-8 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                className="w-full h-auto bg-black"
+              >
+                <source src="/events/compleanni_bimbi/villa pesabene video compleanni pome_001.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="flex justify-center">
+              <a
+                href="tel:+393274146546"
+                className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 rounded-full font-bold hover:bg-accent/90 hover:scale-105 transition-all shadow-lg text-base"
+              >
+                <Phone size={18} />
+                Chiama per informazioni e prenotazioni
+              </a>
+            </div>
+
+            <p className="mt-10 text-xs text-muted-foreground/60 italic">
+              🌿 Villa Pensabene — dove ogni momento diventa un ricordo.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   )

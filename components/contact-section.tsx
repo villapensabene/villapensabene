@@ -10,7 +10,7 @@ export function ContactSection() {
     name: "",
     email: "",
     phone: "",
-    event: "Cena / Menù alla Carta",
+    event: "",
     date: "",
     time: "",
     guests: "2 persone",
@@ -114,15 +114,16 @@ Allergie/Note: ${message || "Nessuna segnalazione"}`
                 </label>
                 <select
                   id="event"
+                  required
                   value={formData.event}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                 >
+                  <option value="" disabled>Indica motivo della visita</option>
                   <option value="Cena / Menù alla Carta">Cena / Menù alla Carta</option>
                   <option value="Giro Pizza">Giro Pizza</option>
                   <option value="Giro Pasta">Giro Pasta</option>
-                  <option value="Pranzo della Domenica (Agriturismo in città)">Pranzo della Domenica (Agriturismo in città)</option>
-                  <option value="Speciale: 1 Maggio">Speciale: 1 Maggio 🌿</option>
+                  <option value="Pranzo della Domenica (Agriturismo in città)">Pranzo della Domenica — Agriturismo in città (pausa estiva)</option>
                   <option value="Evento Privato (Festa / Cerimonia)">Evento Privato (Festa / Cerimonia)</option>
                 </select>
               </div>
@@ -144,14 +145,24 @@ Allergie/Note: ${message || "Nessuna segnalazione"}`
                   <label htmlFor="time" className="block text-sm font-medium mb-2 text-foreground">
                     Orario
                   </label>
-                  <input
-                    type="time"
+                  <select
                     id="time"
                     required
                     value={formData.time}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
-                  />
+                  >
+                    <option value="" disabled>Seleziona orario</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                    <option value="22:00">22:00</option>
+                    <option value="22:30">22:30</option>
+                    <option value="23:00">23:00</option>
+                  </select>
                 </div>
               </div>
               <div className={formData.guests === "5+ persone" ? "grid grid-cols-2 gap-4" : ""}>
@@ -223,6 +234,25 @@ Allergie/Note: ${message || "Nessuna segnalazione"}`
                   </div>
                 )}
               </div>
+              {formData.hasChildren === "SI" && (() => {
+                const adults = formData.guests === "5+ persone"
+                  ? (parseInt(formData.exactGuests) || 0)
+                  : (parseInt(formData.guests) || 0)
+                const children = parseInt(formData.childrenCount) || 0
+                const total = adults + children
+                return (
+                  <div className="animate-in fade-in slide-in-from-top-2 duration-300 flex items-center justify-between gap-3 px-4 py-3 bg-accent/5 border border-accent/20 rounded-md text-sm">
+                    <div className="flex items-center gap-4 text-muted-foreground">
+                      <span>👨‍👩‍👧 <strong className="text-foreground">{adults}</strong> adult{adults === 1 ? "o" : "i"}</span>
+                      <span>+</span>
+                      <span>🧒 <strong className="text-foreground">{children}</strong> bambin{children === 1 ? "o" : "i"}</span>
+                    </div>
+                    <div className="text-accent font-bold whitespace-nowrap">
+                      Totale: {total} ospiti
+                    </div>
+                  </div>
+                )
+              })()}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
                   Intolleranze, Allergie o Note Aggiuntive
