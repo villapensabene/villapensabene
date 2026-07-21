@@ -120,6 +120,7 @@ Allergie/Note: ${message || "Nessuna segnalazione"}`
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                 >
                   <option value="" disabled>Indica motivo della visita</option>
+                  <option value="Pranzo Estivo Straordinario (Domenica 26 Luglio)">🐟 Pranzo Estivo Straordinario — Domenica 26 Luglio</option>
                   <option value="Cena / Menù alla Carta">Cena / Menù alla Carta</option>
                   <option value="Giro Pizza">Giro Pizza</option>
                   <option value="Giro Pasta">Giro Pasta</option>

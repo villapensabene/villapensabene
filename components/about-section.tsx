@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card"
-import { Utensils, Waves, TreePine, Baby, Clock, ScrollText, Sparkles, PartyPopper, Cake, Wine, Sun, Phone } from "lucide-react"
+import { Utensils, Waves, TreePine, Baby, Clock, ScrollText, Sparkles, PartyPopper, Cake, Wine, Sun, Phone, Fish, Calendar, ShieldCheck } from "lucide-react"
 
 export function AboutSection() {
   return (
@@ -13,6 +13,73 @@ export function AboutSection() {
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
             {"Vieni a scoprire il gusto autentico della tradizione siciliana nel cuore di Palermo. La nostra cucina celebra i sapori della terra e del mare con ingredienti freschissimi e ricette artigianali."}
           </p>
+        </div>
+
+        {/* Evento Pranzo Estivo Straordinario - 26 Luglio */}
+        <div className="bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl border border-accent/30 relative overflow-hidden" id="pranzo-estivo">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -mr-32 -mt-32 blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/5 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none" />
+
+          <div className="relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
+                  <Sparkles size={16} />
+                  <span>Apertura Eccezionale</span>
+                </div>
+                <h3 className="font-serif text-3xl md:text-5xl font-bold mb-4 text-foreground">
+                  {"Un Pranzo Estivo Straordinario 🐟☀️"}
+                </h3>
+                <p className="text-accent font-bold uppercase tracking-widest text-sm mb-6">Domenica 26 Luglio · A Pranzo</p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {"Per questa domenica, Villa Pensabene vi propone un'apertura del tutto eccezionale! Vi aspettiamo a pranzo per condividere un'esperienza di gusto pensata per celebrare al meglio l'estate, in una cornice di totale relax."}
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mt-4">
+                  {"I nostri chef hanno ideato un delizioso menu di pesce, preparato con ingredienti freschi e ricette che esaltano i sapori autentici del nostro mare."}
+                </p>
+              </div>
+
+              <div className="relative mx-auto w-full max-w-sm">
+                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full" />
+                <img src="/events/pranzo26luglio/poster.png" alt="Locandina Pranzo Estivo Straordinario 26 Luglio" className="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10 hover:scale-[1.02] transition-transform duration-500" />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-10 max-w-4xl mx-auto">
+              <div className="flex flex-col items-center text-center gap-3 p-5 bg-secondary/40 rounded-2xl border border-white/5">
+                <Calendar className="text-accent" size={22} />
+                <span className="text-sm font-bold">Domenica 26 Luglio — Pranzo</span>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-5 bg-secondary/40 rounded-2xl border border-white/5">
+                <Fish className="text-accent" size={22} />
+                <span className="text-sm font-bold">Menu di Pesce Fresco</span>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-5 bg-secondary/40 rounded-2xl border border-white/5">
+                <Baby className="text-accent" size={22} />
+                <span className="text-sm font-bold">Area Giochi Bimbi</span>
+              </div>
+            </div>
+
+            <div className="max-w-3xl mx-auto mb-10 flex items-start gap-4 bg-secondary/30 border border-white/5 rounded-2xl px-6 py-5">
+              <ShieldCheck className="text-accent shrink-0 mt-0.5" size={22} />
+              <div>
+                <p className="font-bold text-foreground text-sm uppercase tracking-wider mb-1">Spazio e Divertimento per i Più Piccoli 🎈</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {"La struttura dispone di un'area giochi dedicata ai bambini, dove i più piccoli potranno divertirsi in totale sicurezza. A garantire un ambiente organizzato, attento e sicuro ci sarà la nostra operatrice Claudia, così anche i genitori potranno godersi il pranzo in completo relax."}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+              <p className="text-sm text-muted-foreground italic">{"Posti limitati per garantire a tutti gli ospiti la migliore esperienza possibile."}</p>
+              <a
+                href="#prenota"
+                className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-lg text-lg"
+              >
+                Prenota il tuo Tavolo
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Our Specialties Icons */}
@@ -47,7 +114,10 @@ export function AboutSection() {
               <div>
                 <p className="font-bold text-amber-300 text-sm uppercase tracking-wider mb-1">Pausa Estiva — Giugno / Settembre</p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  {"Il pranzo della domenica va in vacanza durante il periodo estivo. Ci rivediamo a settembre con tutta la nostra proposta domenicale!"}
+                  {"Il pranzo della domenica va in vacanza durante il periodo estivo. Ci rivediamo a settembre con tutta la nostra proposta domenicale! "}
+                  <a href="#pranzo-estivo" className="text-accent font-bold underline underline-offset-2 hover:text-accent/80">
+                    Eccezione: Domenica 26 Luglio siamo aperti a pranzo — scopri l'evento speciale 🐟
+                  </a>
                 </p>
               </div>
             </div>
