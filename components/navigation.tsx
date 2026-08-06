@@ -31,7 +31,6 @@ export function Navigation() {
   }, [isOpen])
 
   const navLinks = [
-    { name: "🐟 26 Luglio", href: "#pranzo-estivo" },
     { name: "Proposta Gastronomica", href: "#about" },
 { name: "Menu", href: "#menu" },
     { name: "Galleria", href: "#gallery" },
