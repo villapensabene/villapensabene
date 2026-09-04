@@ -31,6 +31,7 @@ export function Navigation() {
   }, [isOpen])
 
   const navLinks = [
+    { name: "🍂 13 Settembre", href: "#pranzo-13-settembre" },
     { name: "Proposta Gastronomica", href: "#about" },
 { name: "Menu", href: "#menu" },
     { name: "Galleria", href: "#gallery" },
