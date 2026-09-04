@@ -98,7 +98,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-primary-foreground shrink-0" />
-                <a href="mailto:info@villapensabene.it" className="hover:text-gold transition-all opacity-80">info@villapensabene.it</a>
+                <a href="mailto:villapensabeneristorante@gmail.com" className="hover:text-gold transition-all opacity-80">villapensabeneristorante@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 pt-2">
                 <Clock size={18} className="text-primary-foreground shrink-0" />
