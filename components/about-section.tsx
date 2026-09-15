@@ -417,7 +417,7 @@ export function AboutSection() {
         </div>
 
         {/* Compleanni dei Bambini nel Gazebo */}
-        <div className="mt-4 bg-card rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 relative overflow-hidden">
+        <div id="compleanni-bimbi" className="mt-4 scroll-mt-24 bg-card rounded-3xl p-8 md:p-12 shadow-2xl border border-white/10 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-pink-500/5 rounded-full -mr-40 -mt-40 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full -ml-32 -mb-32 blur-3xl pointer-events-none" />
 
