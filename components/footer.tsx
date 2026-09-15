@@ -100,16 +100,22 @@ export function Footer() {
                 <Mail size={18} className="text-primary-foreground shrink-0" />
                 <a href="mailto:villapensabeneristorante@gmail.com" className="hover:text-gold transition-all opacity-80">villapensabeneristorante@gmail.com</a>
               </li>
-              <li className="flex items-center gap-3 pt-2">
-                <Clock size={18} className="text-primary-foreground shrink-0" />
-                <a
-                  href="https://maps.app.goo.gl/99hroLSAfosUnoku6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gold hover:underline text-xs font-medium transition-all"
-                >
-                  Controlla i nostri orari di apertura
-                </a>
+              <li className="flex items-start gap-3 pt-2">
+                <Clock size={18} className="text-primary-foreground shrink-0 mt-0.5" />
+                <span className="opacity-80">
+                  Aperti tutti i giorni a cena
+                  <br />
+                  Chiusura settimanale: lunedì
+                  <span className="block text-xs opacity-70">Orari autunnali in vigore dal 21 settembre</span>
+                  <a
+                    href="https://maps.app.goo.gl/99hroLSAfosUnoku6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gold hover:underline text-xs mt-1 block"
+                  >
+                    Controlla gli orari aggiornati →
+                  </a>
+                </span>
               </li>
             </ul>
           </div>

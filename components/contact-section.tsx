@@ -120,11 +120,10 @@ Allergie/Note: ${message || "Nessuna segnalazione"}`
                   className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-accent bg-background text-foreground"
                 >
                   <option value="" disabled>Indica motivo della visita</option>
-                  <option value="Pranzo della Domenica 13 Settembre (aspettando l'Autunno)">🍂 Pranzo della Domenica — 13 Settembre (aspettando l'Autunno)</option>
                   <option value="Cena / Menù alla Carta">Cena / Menù alla Carta</option>
                   <option value="Giro Pizza">Giro Pizza</option>
                   <option value="Giro Pasta">Giro Pasta</option>
-                  <option value="Pranzo della Domenica (Agriturismo in città)">Pranzo della Domenica — Agriturismo in città (pausa estiva)</option>
+                  <option value="Pranzo della Domenica (Agriturismo in città)">Pranzo della Domenica — Agriturismo in città</option>
                   <option value="Evento Privato (Festa / Cerimonia)">Evento Privato (Festa / Cerimonia)</option>
                 </select>
               </div>
