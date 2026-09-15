@@ -424,7 +424,7 @@ export function AboutSection() {
           <div className="relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
               <Sparkles size={16} />
-              <span>Novità — Da Settembre</span>
+              <span>Novità — Prenota ora</span>
             </div>
 
             <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-foreground">
