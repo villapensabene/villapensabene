@@ -164,40 +164,57 @@ export function AboutSection() {
         </div>
 
         {/* Agriturismo in Città Focus */}
-        <div className="bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl relative overflow-hidden border border-white/10">
+        <div id="pranzo-domenica" className="scroll-mt-24 bg-card rounded-3xl p-8 md:p-12 mb-20 shadow-2xl relative overflow-hidden border border-white/10">
           <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32 blur-3xl" />
           <div className="relative z-10">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 border border-accent/20">
+                <Sparkles size={16} />
+                <span>È Ufficiale — Si Torna Domenica 27 Settembre</span>
+              </div>
               <h3 className="font-serif text-3xl md:text-4xl font-bold text-accent mb-4">{"Agriturismo in Città! 🍷🌿"}</h3>
               <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed italic">
                 {"Vivi l'esperienza di un vero agriturismo senza lasciare Palermo. Prenota il tuo tavolo per la domenica e goditi un pranzo indimenticabile con tutta la famiglia."}
               </p>
             </div>
 
-            {/* Opening hours notice */}
-            <div className="max-w-2xl mx-auto mb-10 flex items-start gap-4 bg-accent/10 border border-accent/30 rounded-2xl px-6 py-5">
-              <Clock className="text-accent shrink-0 mt-0.5" size={22} />
-              <div>
-                <p className="font-bold text-accent text-sm uppercase tracking-wider mb-1">Nuovi Orari Autunnali — dal 21 Settembre</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {"Da lunedì 21 settembre torniamo agli orari autunnali: aperti tutti i giorni a cena, con chiusura settimanale il lunedì. "}
-                  {"Il Pranzo della Domenica riparte a inizio ottobre: la data precisa sarà annunciata a breve sui nostri social."}
-                </p>
+            {/* Launch poster + video */}
+            <div className="grid md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto mb-8">
+              <div className="relative mx-auto w-full max-w-sm">
+                <div className="absolute inset-0 bg-accent/20 blur-3xl rounded-full" />
+                <img
+                  src="/events/pranzo-domenica-agriturismo/poster.png"
+                  alt="Torna il Pranzo della Domenica, Agriturismo in Città"
+                  className="relative z-10 w-full h-auto rounded-3xl shadow-2xl border border-white/10"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/5">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  className="w-full h-auto bg-black"
+                >
+                  <source src="/events/pranzo-domenica-agriturismo/promo.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
 
-            {/* Promotional Video */}
-            <div className="max-w-2xl mx-auto mb-16 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls
-                className="w-full h-auto bg-black"
-              >
-                <source src="/agriturismo-in-citta.mp4" type="video/mp4" />
-              </video>
+            <p className="text-center text-accent font-bold uppercase tracking-widest text-sm mb-10">
+              Da Domenica 27 Settembre, e poi ogni Domenica
+            </p>
+
+            {/* Opening hours notice */}
+            <div className="max-w-2xl mx-auto mb-16 flex items-start gap-4 bg-accent/10 border border-accent/30 rounded-2xl px-6 py-5">
+              <Clock className="text-accent shrink-0 mt-0.5" size={22} />
+              <div>
+                <p className="font-bold text-accent text-sm uppercase tracking-wider mb-1">Orari Autunnali — dal 21 Settembre</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {"Aperti tutti i giorni a cena, con chiusura settimanale il lunedì."}
+                </p>
+              </div>
             </div>
 
             {/* Sunday Menus Grid */}

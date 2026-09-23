@@ -32,6 +32,7 @@ export function Navigation() {
 
   const navLinks = [
     { name: "🎂 Compleanni Bimbi", href: "#compleanni-bimbi" },
+    { name: "🍂 Pranzo Domenica", href: "#pranzo-domenica" },
     { name: "Proposta Gastronomica", href: "#about" },
 { name: "Menu", href: "#menu" },
     { name: "Galleria", href: "#gallery" },
